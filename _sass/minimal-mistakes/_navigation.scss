@@ -328,7 +328,20 @@
     }
   }
 }
-
+@media (max-width:480px){
+  .greedy-nav{
+    width: 113%;
+  }
+}
+@media (min-width:1280px) and (max-width:1440px){
+  .greedy-nav{
+    width: 105%;
+  }
+}
+@media (min-width:1800px){
+  .greedy-nav{
+    width: 120%;
+  }}
 .no-js {
   .greedy-nav {
     .visible-links {
