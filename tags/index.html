@@ -1,0 +1,35 @@
+---
+layout: default
+author_profile: false
+---
+
+{% for tag in site.tags %}
+<h3 style="margin-left:15%; text-shadow: 0 2px #a71529, 0 0 5px #a71529, 0 0 1px #a71529, 0 0 2px #a71529, 0 0 1px #a71529, 0 0 1px #a71529, 0 0 1px #a71529, 0 0 2px #a71529;" id="{{ tag[0] }}">{{ tag[0] }}:</h3>
+<ul style="margin-left:15%">
+  {% for post in tag[1] %}
+    <li class="red"><a href="..{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
+{% endfor %}
+
+<style>
+    .masthead {
+    position: fixed;
+    width: 100%;
+    background-color: #141414;
+    }
+    .initial-content, .search-content,.search-content.is--visible {
+        margin-top: 5%;
+    }
+    .red a:hover{
+      color: #ff073a;
+    }
+    @media (max-width:480px){
+    .search-content.is--visible {
+      margin-top: 10%;
+    }
+    .initial-content, .search-content{
+      margin-top: 17%;
+    }
+  }
+</style>

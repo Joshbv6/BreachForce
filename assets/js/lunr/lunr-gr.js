@@ -1,5 +1,7 @@
 ---
 layout: none
+sitemap:
+  exclude: 'yes'
 ---
 
 step1list = new Array();

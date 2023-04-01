@@ -208,7 +208,7 @@ body:hover .visually-hidden button {
   .fab,
   .far,
   .fal {
-    color: $text-color;
+    color: #ff073a ;
   }
 
   .fa-behance,
@@ -242,7 +242,7 @@ body:hover .visually-hidden button {
   .fa-github,
   .fa-github-alt,
   .fa-github-square {
-    color: $github-color;
+    /*color: $github-color;*/
   }
 
   .fa-gitlab {
@@ -329,8 +329,11 @@ body:hover .visually-hidden button {
 /*
    Navicons
    ========================================================================== */
-
+button:focus{
+  outline: none !important;
+}
 .navicon {
+  outline: none;
   position: relative;
   width: $navicon-width;
   height: $navicon-height;
@@ -338,6 +341,7 @@ body:hover .visually-hidden button {
   margin: auto;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  filter: drop-shadow(3px 3px 7px #a71529);
 
   &:before,
   &:after {
@@ -349,6 +353,9 @@ body:hover .visually-hidden button {
     background: $primary-color;
     -webkit-transition: 0.3s;
     transition: 0.3s;
+  }
+  &:focus{
+    outline: none;
   }
 
   &:before {

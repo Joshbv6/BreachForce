@@ -1,0 +1,38 @@
+---
+
+layout: single
+author_profile: true
+title:  ""
+excerpt_separator: "<!--more-->"
+header:
+  teaser: '/assets/images/photo.jpg'
+category: 
+  - category
+
+tags:
+  - tags
+---
+<i id="imgpost">{% include figure image_path="./assets/images/photo.jpg" alt="" id="imgpost"%}</i>
+<div class="descrip">This description is the one that will show on the home page</div>
+<!--more-->
+<style>
+    .masthead {
+    position: fixed;
+    width: 100%;
+    background-color: #141414;
+    }
+    .initial-content, .search-content,.search-content.is--visible {
+        margin-top: 8%;
+    }
+    @media (max-width:480px){
+    .search-content.is--visible {
+      margin-top: 10%;
+    }
+    .initial-content, .search-content{
+        margin-top: 17%;
+    }
+    .page__content p{
+      text-align: center;
+    }
+  }
+</style>

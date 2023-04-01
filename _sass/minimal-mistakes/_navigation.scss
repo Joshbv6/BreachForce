@@ -49,7 +49,12 @@
 /*
      Post pagination navigation links
      ========================================================================== */
-
+@media (max-width:480px){
+  .pagination{
+    /*float: right !important;
+    width: 82.5% !important;*/
+  }
+}
 .pagination {
   @include clearfix();
   float: left;
@@ -177,12 +182,12 @@
   -ms-flex-align: center;
   align-items: center;
   min-height: $nav-height;
-  background: $background-color;
+  background: none; /*$background-color;*/
 
   a {
     display: block;
     margin: 0 1rem;
-    color: $masthead-link-color;
+    color: #fff;
     text-decoration: none;
     -webkit-transition: none;
     transition: none;

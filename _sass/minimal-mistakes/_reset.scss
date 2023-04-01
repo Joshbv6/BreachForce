@@ -75,7 +75,7 @@ audio:not([controls]) {
 }
 
 a {
-  color: $link-color;
+  color: #fff;
 }
 
 /* Apply focus state */
@@ -90,7 +90,9 @@ a:hover,
 a:active {
   outline: 0;
 }
-
+a:hover{
+  color: #ff073a !important;
+}
 /* Prevent sub and sup affecting line-height in all browsers */
 
 sub,
@@ -113,7 +115,7 @@ sub {
 
 img {
   /* Responsive images (ensure images don't scale beyond their parents) */
-  max-width: 100%; /* part 1: Set a maximum relative to the parent*/
+  /*max-width: 100%; /* part 1: Set a maximum relative to the parent*/
   width: auto\9; /* IE7-8 need help adjusting responsive images*/
   height: auto; /* part 2: Scale the height according to the width, otherwise you get stretching*/
 

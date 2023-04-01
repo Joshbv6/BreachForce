@@ -1,4 +1,84 @@
 ---
 layout: home
-author_profile: true
+author_profile: false
 ---
+<!-- This loops through the paginated posts -->
+{% for post in paginator.posts %}
+  <div class="date"><h1><a class="neonred" href="{{ post.url | relative_url }}">{{ post.title }}</a></h1><br>
+    <span class="datetamp ">{{  site.time | date_to_string}}</span></div>
+  <p><div class="content">
+    {{ post.excerpt }}
+  </div></p>
+{% endfor %}
+<style>
+  #banner{
+    display: block;
+  }
+  .descrip{
+    margin-top: -35px;
+  }
+  #imgpost{
+    width: 70%;
+  }
+  .entries{
+    display: block;
+  }
+  .masthead {
+    position: fixed;
+    width: 100%;
+    background-color: #141414;
+}
+  .initial-content, .search-content,.search-content.is--visible {
+      margin-top: 5%;
+  }
+  @media (max-width:480px){
+    .search-content.is--visible {
+      margin-top: 10%;
+    }
+    .initial-content, .search-content{
+      margin-top: 17%;
+    }
+    .archive {
+    margin-left: 17%;
+    width: 100%;
+    }
+    .masthead__menu{
+      width: 90%;
+    } 
+    .entries-list,.archive__subtitle{
+      margin-left: -17%;
+    }
+    #banner{  /* Movil */
+      height: 210px;
+    }
+    #main{
+      width: 92%;
+    }
+  }
+  @media (min-width:1360px) and (max-width:1500px){ /* Desktop - Portatil */
+    #banner{
+      height: 620px;
+    }
+  }
+  @media (min-width:1480px) and (max-width:1800px){ /* Portatil HD */
+    #banner{
+      height: 580px;
+    }
+  }
+  @media (min-width:1280px) and (max-width:1360px){ /* Portatil */
+    #banner{
+      height: 500px;
+    }
+  }
+  @media (max-width:1280px) and (min-width:480px){  /*  Tablet  */
+    #banner{
+      height: 350px;
+    }
+  }
+  @media (min-width:1800px){  /* Desktop HD */ 
+    #banner{
+      margin-top: 0;
+      height: 900px;
+    }
+  }
+</style>

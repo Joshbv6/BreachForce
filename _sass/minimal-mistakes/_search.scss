@@ -14,17 +14,20 @@
   height: $nav-toggle-height;
   border: 0;
   outline: none;
-  color: $primary-color;
+  color: #fff;
   background-color: transparent;
   cursor: pointer;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: 0s;
+  transition: 0s;
 
   &:hover {
-    color: mix(#000, $primary-color, 25%);
+    color: #ff073a;
   }
 }
-
+.search__toggle:focus{
+  color: #ff073a;
+  outline: none;
+}
 .search-icon {
   width: 100%;
   height: 100%;

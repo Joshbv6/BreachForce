@@ -1,20 +1,20 @@
 ---
 layout: none
+sitemap:
+  exclude: 'yes'
 ---
+
 
 var idx = lunr(function () {
   this.field('title')
-  this.field('excerpt')
   this.field('categories')
   this.field('tags')
-  this.ref('id')
 
   this.pipeline.remove(lunr.trimmer)
 
   for (var item in store) {
     this.add({
       title: store[item].title,
-      excerpt: store[item].excerpt,
       categories: store[item].categories,
       tags: store[item].tags,
       id: item
@@ -34,7 +34,7 @@ $(document).ready(function() {
             q.term(term, {  usePipeline: false, wildcard: lunr.Query.wildcard.TRAILING, boost: 10 })
           }
           if (term != ""){
-            q.term(term, {  usePipeline: false, editDistance: 1, boost: 1 })
+            q.term(term, {  usePipeline: false, editDistance: 0, boost: 0 })
           }
         })
       });

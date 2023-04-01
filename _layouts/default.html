@@ -12,13 +12,50 @@
   <head>
     {% include head.html %}
     {% include head/custom.html %}
+    <style>
+      #banner{
+        margin-top: 0;
+        width: 100%/*82%*/;
+        height: 300px;
+        margin-left: 0/*8.7%*/;
+        display: none;
+      }
+      .entries{
+        color:#ff073a;
+        margin-bottom:50px;
+        margin-top: 0;
+        display: none;
+      }
+      @media (max-width:480px){
+        #banner{
+          height: 180px;
+          width: 112%;
+        }
+      }
+    </style>
+    <script>
+      function regexp(){
+        var entriesRegex = /^(http:\/\/127.0.0.1:4000\/|http:\/\/localhost:4000\/|https:\/\/joshbv6.github.io\/)entries\/$/;
+        var pagesregex = /^(http:\/\/localhost:4000\/|https:\/\/joshbv6.github.io\/)entries\/page[^\/]*/;
+        let url = window.location.href;
+        if (entriesRegex.test(url)) {
+          document.getElementById("banner").style.display = "block";
+        }
+        if (pagesregex.test(url)) {
+          document.getElementById("banner").style.display = "block";
+          document.getElementById("banner").src = "../assets/images/blog.jpg";
+        } 
+      }
+    </script>
   </head>
 
-  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
+  <body style="scroll-behavior: smooth;" onload="regexp()"class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
     {% include_cached skip-links.html %}
     {% include_cached masthead.html %}
 
     <div class="initial-content">
+      <img src="./assets/images/blog.jpg" id="banner">
+      <hr id="entries" class="entries">
       {{ content }}
     </div>
 

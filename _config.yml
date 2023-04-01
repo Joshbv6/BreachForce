@@ -10,22 +10,22 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
- #theme                  : "minimal-mistakes-jekyll"
+#theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "DevPen|Entries"
+title                    : "BreachForce"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Joshbv6"
-description              : "An amazing website."
+description              : ""
 url                      : "https://joshbv6.github.io" # the base hostname & protocol for your site e.g. "https://joshbv6s.github.io"
-baseurl                  : "/Entries" # the subpath of your site, e.g. "/blog"
-repository               : "Joshbv6/Entries" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+baseurl                  : "/entries" # the subpath of your site, e.g. "/blog"
+repository               : "Joshbv6/entries" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo                     : "/assets/images/logo.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -57,10 +57,10 @@ reCaptcha:
   siteKey                :
   secret                 :
 atom_feed:
-  path                   : # blank (default) uses feed.xml
+  path                   : "https://joshbv6.github.io" # blank (default) uses feed.xml
   hide                   : # true, false (default)
 search                   : true # true, false (default)
-search_full_content      : true # true, false (default)
+search_full_content      : false # true, false (default)
 search_provider          : lunr # lunr (default), algolia, google
 lunr:
   search_within_pages    : true # true, false (default)
@@ -104,18 +104,18 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
+  name             : "Joshbv6"
+  avatar           : "/assets/images/avatar.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : ""  #"Welcome to my blog! In those pages you can find all kind of information abou my pussy and learn how did my travel did. From zero I started this journey so I can keep track of what I learn and I can hacerme el chulo."
+  location         : #"Somewhere"
   email            :
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:your.name@email.com"
-    - label: "Website"
+      url: "mailto:joshuabanonvalera@hotmail.com"
+    - label: "DevSec"
       icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
+      url: "https://joshbv6.github.io/"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
@@ -124,10 +124,13 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
+      url: "https://github.com/Joshbv6/"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+      url: "https://www.instagram.com/joshbv6/"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/joshua-bañón-valera-86b986231/"
 
 # Site Footer
 footer:
@@ -140,7 +143,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: "https://github.com/Joshbv6/"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
@@ -149,13 +152,20 @@ footer:
       # url:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      # url:
+      url: "https://www.instagram.com/joshbv6/"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/joshua-bañón-valera-86b986231/"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:joshuabanonvalera@hotmail.com"
 
 
 # Reading Files
 include:
   - .htaccess
   - _pages
+  - _docs/_posts
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -226,7 +236,6 @@ timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 # Plugins (previously gems:)
 plugins:
   - jekyll-paginate
-  - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
@@ -234,7 +243,6 @@ plugins:
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-paginate
-  - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
@@ -279,14 +287,19 @@ compress_html:
 
 # Defaults
 defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: # true
-      share: true
-      related: true
+   #_posts
+    - scope:
+        path: ""
+        type: posts
+      values:
+        layout: single
+        author_profile: false
+        read_time: true
+        comments: false # true
+        share: true
+        related: true
+
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:path/

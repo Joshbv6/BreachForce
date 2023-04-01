@@ -131,11 +131,12 @@ a {
   }
 
   &:visited {
-    color: $link-color-visited;
+    color: #fff;
   }
 
   &:hover {
-    color: $link-color-hover;
+    color: #a71529;
+    text-shadow: 0 0 transparent;
     outline: 0;
   }
 }
@@ -208,6 +209,7 @@ figure {
     border-radius: $border-radius;
     -webkit-transition: $global-transition;
     transition: $global-transition;
+    margin-top: -50px;
   }
 
   > a {
