@@ -338,6 +338,11 @@
     width: 105%;
   }
 }
+@media (min-width:1500px) and (max-width:1800px){
+  .greedy-nav{
+    width: 110%;
+  }
+}
 @media (min-width:1800px){
   .greedy-nav{
     width: 120%;
