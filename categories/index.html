@@ -1,0 +1,127 @@
+---
+layout: home
+author_profile: false
+---
+<div class="cat_list">
+  <ul class="index">
+    {% for category in site.categories %}
+      <li>
+        <a href="#{{ category[0] }}">{{ category[0] }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+{% for category in site.categories %}
+<h3 class="cat_title" id="{{ category[0] }}">{{ category[0] }}:</h3>
+<ul class="posts">
+  {% for post in category[1] %}
+    <li class="post"><a href="..{{ post.url }}"><h1>{{ post.title }}</h1><br><p>{{ post.excerpt }}</p></a></li>
+  {% endfor %}
+</ul>
+{% endfor %}
+<style>
+  .posts{
+    margin-left: 5%;
+    list-style-type: none;
+  }
+  a{
+    text-decoration: none;
+  }
+
+  figure img{
+    width: 70%;
+  }
+  .index{
+    position: absolute;
+    margin-left: -20%;
+    text-decoration: underline;
+    font-size: 26px;
+  }
+    .index li a:hover{
+      color: #ff073a;
+    }
+  
+  .cat_list{
+    position: fixed;
+    margin-left: -20%;
+  }
+  .cat_title{
+    margin-left:10%; 
+    text-shadow: 0 2px #a71529, 0 0 5px #a71529, 0 0 1px #a71529, 0 0 2px #a71529, 0 0 1px #a71529, 0 0 1px #a71529, 0 0 1px #a71529, 0 0 2px #a71529;
+    font-size: 45px;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  .descrip{
+    margin-top: -35px;
+  }
+  #imgpost{
+    margin-top: -15px;
+  }
+  .masthead {
+    position: fixed;
+    width: 100%;
+    background-color: #141414;
+}
+.initial-content, .search-content,.search-content.is--visible {
+    margin-top: 5%;
+}
+@media (max-width:480px){
+    .search-content.is--visible {
+      margin-top: 12%;
+  }
+    .initial-content, .search-content{
+      margin-top: 5%;
+    }
+    /*.descrip{
+    text-align: left;
+    width: 70%;
+    float: left;
+    margin-bottom: 10%;
+    margin-left: 30%;
+    }
+    figure img {
+    margin-left: 30%;
+    }
+    .post h1{
+      text-align: left;
+      margin-top: 80px;
+      margin-left: 30%;
+    }
+    .cat_title {
+    margin-left: 49%;
+    font-size: 30px;
+    margin-top: 15%;
+    margin-bottom: -50px;
+    text-decoration: underline;
+    }
+    .index{
+      left: 70px;
+      margin-top: 0;
+      font-size: 25px;
+    }*/
+    .posts{
+      margin-left: -45px;
+      list-style-type: none;
+      width: 90%;
+    }
+    .cat_title {
+    margin-left: -5px;
+    font-size: 30px;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    }
+    .entries{
+      display: none;
+    }
+    .index {
+    left: 330px;
+    font-size: 20px;
+    margin-top: 0;
+    }
+    .initial-content, .search-content{
+      margin-top: 10%;
+    }
+
+  }
+</style>
