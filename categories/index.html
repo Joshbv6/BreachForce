@@ -20,6 +20,25 @@ author_profile: false
 </ul>
 {% endfor %}
 <style>
+  .pinned {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+          -webkit-transition: -webkit-transform 0.2s ease-in-out;
+      transition: -webkit-transform 0.2s ease-in-out;
+      transition: transform 0.2s ease-in-out;
+      transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+
+.unpinned {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+          -webkit-transition: -webkit-transform 0.2s ease-in-out;
+      transition: -webkit-transform 0.2s ease-in-out;
+      transition: transform 0.2s ease-in-out;
+      transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  /*descomentar para que no sea fija la cabecera*/
+  position: fixed;
+}
   .posts{
     margin-left: 5%;
     list-style-type: none;
@@ -131,3 +150,21 @@ author_profile: false
 
   }
 </style>
+<script>
+  var yPos = window.scrollY;
+  var masthead = document.getElementById("masthead");
+  window.onscroll = function(e)
+  {
+    if(yPos < window.scrollY)
+    {
+      masthead.classList.add("unpinned");
+      masthead.classList.remove("pinned");
+    } 
+    else
+    {
+      masthead.classList.remove("unpinned");
+      masthead.classList.add("pinned");
+    }
+    yPos = window.scrollY;
+  }
+</script>
