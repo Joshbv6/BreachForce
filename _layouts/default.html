@@ -7,6 +7,9 @@
   Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+
+
+  RUN build exec jekyll serve
 -->
 <html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
   <head>
@@ -96,7 +99,7 @@
       };
       let totalHeight = window.innerHeight;
       const totalWidth = window.innerWidth;
-      if(totalWidth > 1400 && totalWidth < 1600){
+      if(totalWidth > 1400){
         totalHeight = totalHeight - 75;
       }
       if(totalWidth > 1200 && totalWidth < 1400){
@@ -111,8 +114,8 @@
           totalHeight = totalHeight / 3;
         }
       }
-      if(totalWidth > 1600){
-        totalHeight = totalHeight - 175;
+      if(totalWidth > 2000){
+        totalHeight = totalHeight - 120;
       }
       function init(elemid) {
         let canvas = document.getElementById(elemid),
