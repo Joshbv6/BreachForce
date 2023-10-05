@@ -103,20 +103,25 @@
         totalHeight = totalHeight - 75;
       }
       if(totalWidth > 1200 && totalWidth < 1400){
-        totalHeight = totalHeight - 150;
+        totalHeight = totalHeight - 50; // 150
       }
       if(totalWidth < 1200 && totalWidth > 400){
         totalHeight = totalHeight - 120;
       }
-      if(totalWidth < 800){
+      if(totalWidth < 800 && window.innerHeight > 500){
         totalHeight = totalHeight / 2;
         if(totalWidth < 400 || window.innerHeight < 750){
           totalHeight = totalHeight / 3;
         }
       }
+      if(window.innerHeight < 500){
+        totalHeight = window.innerHeight - 30;
+      }
       if(totalWidth > 2000){
         totalHeight = totalHeight - 120;
       }
+
+      document.getElementById("canvas").style="max-height:"+totalHeight+"px !important;"
       function init(elemid) {
         let canvas = document.getElementById(elemid),
           c = canvas.getContext("2d"),
