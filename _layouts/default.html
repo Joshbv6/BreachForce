@@ -98,7 +98,7 @@
         );
       };
       let totalHeight = window.innerHeight;
-      const totalWidth = window.innerWidth;
+      var totalWidth = window.innerWidth;
       if(totalWidth > 1400){
         totalHeight = totalHeight - 75;
       }
@@ -110,7 +110,7 @@
       }
       if(totalWidth < 800){
         totalHeight = totalHeight / 2;
-        if(totalWidth < 400){
+        if(totalWidth < 400 || window.innerHeight < 750){
           totalHeight = totalHeight / 3;
         }
       }
