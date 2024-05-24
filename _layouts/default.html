@@ -14,10 +14,10 @@
 <html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="https://joshbv6.github.io/BreachForce/assets/images/newlogo.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://joshbv6.github.io/BreachForce/assets/images/newlogo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://joshbv6.github.io/BreachForce/assets/images/newlogo.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://joshbv6.github.io/BreachForce/assets/images/newlogo.png">
+    <link rel="icon" type="image/x-icon" href="https://joshbv6.github.io/BreachForce/assets/images/g_logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://joshbv6.github.io/BreachForce/assets/images/g_logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://joshbv6.github.io/BreachForce/assets/images/g_logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://joshbv6.github.io/BreachForce/assets/images/g_logo.png">
     {% include head.html %}
     {% include head/custom.html %}
     <style>
@@ -29,7 +29,7 @@
         display: none;
       }
       .entries{
-        color:#ff073a;
+        color:rgb(0,255,0,0.9);
         margin-bottom:50px;
         margin-top: 0;
         display: none;
@@ -111,7 +111,7 @@
       if(totalWidth < 800 && window.innerHeight > 500){
         totalHeight = totalHeight / 2;
         if(totalWidth < 400 || window.innerHeight < 750){
-          totalHeight = totalHeight / 3;
+          totalHeight = totalHeight * 1.66; // / 3;
         }
       }
       if(window.innerHeight < 500){
@@ -132,7 +132,8 @@
         return { c: c, canvas: canvas };
       }
       
-      window.onload = function () {
+      window.onload = setTentacle();
+      function setTentacle(colorTentacle = false) {
         if(location.pathname != "/BreachForce/"){
         document.getElementById("canvas").style= "display: none";
       }
@@ -234,18 +235,25 @@
               for (let i = 0; i < this.n; i++) {
                 this.segments[i].show();
               }
-              /*c.strokeStyle =
-                "hsl(" +
-                (this.rand * 60 + 180) +
-                ",100%," +
-                (this.rand * 60 + 25) +
-                "%)";*/
-                c.strokeStyle =
-                "hsl(" +
-                (this.rand ) +
-                ",100%," +
-                (this.rand * 60 + 15) +
-                "%)";
+
+              // TENTACLE COLOR
+
+              // BLUE
+              let blueTentacle = "hsl(" +(this.rand * 60 + 180) +",100%," +(this.rand * 60 + 25) +"%)";
+
+              // RED
+              var redTentacle = "hsl(" +(this.rand ) +",100%," +(this.rand * 60 + 15) +"%)";
+
+              // GREEN
+              var greenTentacle = "hsl(" +(this.rand* 10 + 115) +",150%," +(this.rand* 20 + 2) +"%)";
+
+              // YELLOW
+              var yellowTentacle = "hsl(" +(this.rand * 60 + 15) +",100%," +(this.rand * 60 + 15) +"%)";
+
+              // WHITE
+              var whiteTentacle = "hsl(" +(this.rand * 60 + 15) +",100%," +(this.rand * 60 + 180) +"%)";
+
+              c.strokeStyle = greenTentacle;
               c.lineWidth = this.rand * 2;
               c.lineCap = "round";
               c.lineJoin = "round";
@@ -257,22 +265,25 @@
             c.beginPath();
             if (dist(this.x, this.y, target.x, target.y) <= this.l) {
               c.arc(this.x, this.y, 2 * this.rand + 1, 0, 2 * Math.PI);
-              c.fillStyle = "red";  // white
+              // Point touched
+
+              c.fillStyle = "green";  // white
             } else {
+              // Point untouched
               c.arc(this.x, this.y, this.rand * 2, 0, 2 * Math.PI);
-              c.fillStyle = "white"; // darkcyan
+              c.fillStyle = "rgb(0, 139, 139, 0.15)"; //"rgb(255, 255, 255, 0.2)";
             }
             c.fill();
           }
         }
-        var tentacleNumber = 800;
-        var tentacleLenght = 200;
+        var tentacleNumber = 3750;
+        var tentacleLenght = 137;
         if(totalWidth < 800){
           tentacleNumber = 400;
           tentacleLenght = 160;
           if(totalWidth < 400){
-            tentacleNumber = 200;
-            tentacleLenght = 80;
+            tentacleNumber = 800;
+            tentacleLenght = 110;
           }
         }
         let maxl = tentacleLenght,

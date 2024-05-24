@@ -20,6 +20,17 @@ body {
     /* when primary navigation is visible, the content in the background won't scroll */
     overflow: hidden;
   }
+
+  ::-moz-selection { /* Code for Firefox */
+    color: white;
+    background: rgba(0,255,0,0.9);
+    opacity: 0.9;
+  }
+  
+  ::selection {
+    color: white;
+    background: rgba(0,255,0,0.9);
+  }
 }
 
 h1,

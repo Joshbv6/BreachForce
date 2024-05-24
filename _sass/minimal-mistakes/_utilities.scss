@@ -208,7 +208,7 @@ body:hover .visually-hidden button {
   .fab,
   .far,
   .fal {
-    color: #ff073a ;
+    color: rgba(0,255,0,0.9);
   }
 
   .fa-behance,
@@ -341,7 +341,7 @@ button:focus{
   margin: auto;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  filter: drop-shadow(3px 3px 7px #a71529);
+  filter: drop-shadow(1px 1px 1px #01D758);
 
   &:before,
   &:after {

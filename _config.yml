@@ -25,7 +25,7 @@ url                      : "https://joshbv6.github.io" # the base hostname & pro
 baseurl                  : "/BreachForce" # the subpath of your site, e.g. "/blog"
 repository               : "Joshbv6/BreachForce" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : "/assets/images/newlogo.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo                     : "/assets/images/g_logo.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -105,7 +105,7 @@ analytics:
 # Site Author
 author:
   name             : "Joshbv6"
-  avatar           : "/assets/images/avatar.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/g_avatar.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : ""  #"Welcome to my blog! In those pages you can find all kind of information abou my pussy and learn how did my travel did. From zero I started this journey so I can keep track of what I learn and I can hacerme el chulo."
   location         : #"Somewhere"
   email            :
@@ -113,7 +113,7 @@ author:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:joshuabanonvalera@hotmail.com"
-    - label: "DevSec"
+    - label: "Portfolio"
       icon: "fas fa-fw fa-link"
       url: "https://joshbv6.github.io/"
     - label: "Twitter"

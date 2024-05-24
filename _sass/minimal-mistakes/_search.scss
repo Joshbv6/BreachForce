@@ -28,11 +28,11 @@
   transition: 0s;
 
   &:hover {
-    color: #ff073a;
+    color: rgba(0,255,0,0.9);
   }
 }
 .search__toggle:focus{
-  color: #ff073a;
+  color: rgba(0,255,0,0.9);
   outline: none;
 }
 .search-icon {

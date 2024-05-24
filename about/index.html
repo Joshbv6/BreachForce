@@ -2,8 +2,7 @@
 layout: home
 author_profile: true
 ---
-{% include figure image_path="./assets/images/disen.png" alt="" id="imgpost"%}
-<b class="breach neonred">Welcome to BreachForce!</b><br> 
+<b class="neongreen">Welcome to BreachForce!</b><br> 
 <p>This is your go-to source for all things related to cybersecurity.</p>
 Here, I'll be sharing my personal journey into the world of cybersecurity, as well as demonstrating different techniques to find vulnerabilities and strengthen your cybersecurity knowledge.<br>
 
@@ -11,10 +10,17 @@ Here, I'll be sharing my personal journey into the world of cybersecurity, as we
 
 
 <style>
+  .page__title {
+    display: none;
+  }
+  .neongreen {
+    color: rgb(0,255,0,0.9);
+    font-size: 30px;
+  }
   figure img{
-    border-left: 2px double  #ff073a;
-    border-bottom: 4px double  #ff073a;
-    border-right: 2px double  #ff073a;
+    border-left: 2px double  #00FF00;
+    border-bottom: 4px double  #00FF00;
+    border-right: 2px double  #00FF00;
     border-radius: 8px;
   }
   figure{
@@ -25,7 +31,7 @@ Here, I'll be sharing my personal journey into the world of cybersecurity, as we
     font-size: 30px;
   }
     .author__urls li a:hover{
-      color: #ff073a;
+      color: rgb(0,255,0,0.9);
     }
     .entries-list,.archive__subtitle{
         display: none;

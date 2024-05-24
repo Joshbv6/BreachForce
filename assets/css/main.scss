@@ -26,7 +26,8 @@ search: false
         color: #fff;
     }
     &:hover{
-        color: #ff073a;
+        color: rgba(0,255,0,0.9);
+        opacity: 0.9;
         text-shadow: 0 0 transparent;
     }
 }
